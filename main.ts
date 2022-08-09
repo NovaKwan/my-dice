@@ -17,6 +17,79 @@ function der_der_der_ () {
     basic.pause(100)
     SuperBit.RGB_Program().showColor(neopixel.colors(NeoPixelColors.Black))
     out = randint(1, 12)
+    if (out == 1) {
+        myimg = images.createImage(`
+            . . # . .
+            . # # . .
+            . . # . .
+            . . # . .
+            . # # # .
+            `)
+    } else if (out == 2) {
+        myimg = images.createImage(`
+            . # # # .
+            . . . # .
+            . # # # .
+            . # . . .
+            . # # # .
+            `)
+    } else if (out == 3) {
+        myimg = images.createImage(`
+            . # # # .
+            . . . # .
+            . # # # .
+            . . . # .
+            . # # # .
+            `)
+    } else if (out == 4) {
+        myimg = images.createImage(`
+            . . # # .
+            . # . # .
+            # # # # #
+            . . . # .
+            . . . # .
+            `)
+    } else if (out == 5) {
+        myimg = images.createImage(`
+            . # # # .
+            . # . . .
+            . # # # .
+            . . . # .
+            . # # # .
+            `)
+    } else if (out == 6) {
+        myimg = images.createImage(`
+            . # # # #
+            . # . . .
+            . # # # #
+            . # . . #
+            . # # # #
+            `)
+    } else if (out == 7) {
+        myimg = images.createImage(`
+            . # # # #
+            . . . . #
+            . . . # .
+            . . # . .
+            . # . . .
+            `)
+    } else if (out == 8) {
+        myimg = images.createImage(`
+            . # # # .
+            . # . # .
+            . # # # .
+            . # . # .
+            . # # # .
+            `)
+    } else if (out == 9) {
+        myimg = images.createImage(`
+            . # # # .
+            . # . # .
+            . # # # .
+            . . . # .
+            . # # # .
+            `)
+    }
     if (out == 10) {
         myimg = images.createImage(`
             # . # # #
@@ -42,21 +115,16 @@ function der_der_der_ () {
             # . # # #
             `)
     }
-    if (out > 9) {
-        myimg.showImage(0)
-    } else {
-        basic.showNumber(out)
-    }
+    myimg.showImage(0)
     basic.clearScreen()
     basic.pause(200)
-    if (out > 9) {
-        myimg.showImage(0)
-    } else {
-        basic.showNumber(out)
-    }
+    myimg.showImage(0)
     music.playTone(1000, music.beat(BeatFraction.Eighth))
 }
 input.onSound(DetectedSound.Loud, function () {
+    der_der_der_()
+})
+input.onGesture(Gesture.Shake, function () {
     der_der_der_()
 })
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
@@ -64,4 +132,4 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
 })
 let myimg: Image = null
 let out = 0
-input.setSoundThreshold(SoundThreshold.Loud, 85)
+input.setSoundThreshold(SoundThreshold.Loud, 124)
