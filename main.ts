@@ -11,6 +11,9 @@ input.onSound(DetectedSound.Loud, function () {
 input.onGesture(Gesture.Shake, function () {
     der_der_der_()
 })
+/**
+ * start of program
+ */
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     der_der_der_()
 })
