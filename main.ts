@@ -1,3 +1,17 @@
+input.onSound(DetectedSound.Loud, function () {
+    input.onSound(DetectedSound.Loud, function () {
+    })
+der_der_der_()
+    input.onSound(DetectedSound.Loud, function () {
+        der_der_der_()
+    })
+})
+input.onGesture(Gesture.Shake, function () {
+    der_der_der_()
+})
+input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+    der_der_der_()
+})
 function der_der_der_ () {
     basic.clearScreen()
     SuperBit.RGB_Program().setPixelColor(0, neopixel.colors(NeoPixelColors.Blue))
@@ -121,15 +135,6 @@ function der_der_der_ () {
     myimg.showImage(0)
     music.playTone(1000, music.beat(BeatFraction.Eighth))
 }
-input.onSound(DetectedSound.Loud, function () {
-    der_der_der_()
-})
-input.onGesture(Gesture.Shake, function () {
-    der_der_der_()
-})
-input.onLogoEvent(TouchButtonEvent.Pressed, function () {
-    der_der_der_()
-})
 let myimg: Image = null
 let out = 0
 input.setSoundThreshold(SoundThreshold.Loud, 124)
