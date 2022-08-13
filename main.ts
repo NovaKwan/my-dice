@@ -1,10 +1,10 @@
-input.onSound(DetectedSound.Loud, function () {
-    input.onSound(DetectedSound.Loud, function () {
-    })
+function mysoundtrigged () {
+    input.onSound(DetectedSound.Loud, function (){})
 der_der_der_()
-    input.onSound(DetectedSound.Loud, function () {
-        der_der_der_()
-    })
+    input.onSound(DetectedSound.Loud, mysoundtrigged)
+}
+input.onSound(DetectedSound.Loud, function () {
+    mysoundtrigged()
 })
 input.onGesture(Gesture.Shake, function () {
     der_der_der_()
@@ -137,4 +137,5 @@ function der_der_der_ () {
 }
 let myimg: Image = null
 let out = 0
-input.setSoundThreshold(SoundThreshold.Loud, 124)
+let busy = 0
+input.setSoundThreshold(SoundThreshold.Loud, 146)
