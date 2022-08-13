@@ -1,3 +1,5 @@
+let out = 0
+let myimg: Image = null
 function mysoundtrigged () {
     input.onSound(DetectedSound.Loud, function (){})
 der_der_der_()
@@ -135,7 +137,3 @@ function der_der_der_ () {
     myimg.showImage(0)
     music.playTone(1000, music.beat(BeatFraction.Eighth))
 }
-let myimg: Image = null
-let out = 0
-let busy = 0
-input.setSoundThreshold(SoundThreshold.Loud, 146)
