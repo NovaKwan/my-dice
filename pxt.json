@@ -1,21 +1,17 @@
 {
-    "name": "my dice",
-    "description": "",
+    "name": "my-dice",
     "dependencies": {
         "core": "*",
-        "radio": "*",
         "microphone": "*",
         "SuperBit": "github:lzty634158/SuperBit#0a0d6cd2c18804f6b56e944d0c7ff7bd91473ec8"
     },
     "files": [
+        ".vscode/settings.json",
+        "README.md",
         "main.blocks",
         "main.ts",
-        "README.md",
-        "main.py",
-        null
-    ],
-    "testFiles": [
-        "test.ts"
+        "test.ts",
+        "tsconfig.json"
     ],
     "targetVersions": {
         "target": "5.0.12",
@@ -24,16 +20,5 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "blocksprj",
-    "yotta": {
-        "config": {
-            "microbit-dal": {
-                "bluetooth": {
-                    "open": 1,
-                    "whitelist": 0,
-                    "security_level": null
-                }
-            }
-        }
-    }
+    "preferredEditor": "blocksprj"
 }
