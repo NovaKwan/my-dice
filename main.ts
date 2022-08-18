@@ -1,19 +1,18 @@
-let out = 0
-let myimg: Image = null
 function mysoundtrigged () {
-    input.onSound(DetectedSound.Loud, function (){})
-der_der_der_()
+    input.onSound(DetectedSound.Loud, function () { })
+if (state == 0) {
+        ts = input.runningTime()
+        state = 1
+    } else if (state == 1) {
+        state = 2
+        der_der_der_()
+        state = 0
+    }
     input.onSound(DetectedSound.Loud, mysoundtrigged)
 }
-input.onSound(DetectedSound.Loud, function () {
-    mysoundtrigged()
-})
 input.onGesture(Gesture.Shake, function () {
     der_der_der_()
 })
-/**
- * start of program
- */
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     der_der_der_()
 })
@@ -140,3 +139,13 @@ function der_der_der_ () {
     myimg.showImage(0)
     music.playTone(1000, music.beat(BeatFraction.Eighth))
 }
+let myimg: Image = null
+let out = 0
+let ts = 0
+let state = 0
+input.onSound(DetectedSound.Loud, mysoundtrigged)
+basic.forever(function () {
+    if (false) {
+    	
+    }
+})
